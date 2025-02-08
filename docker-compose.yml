@@ -1,16 +1,19 @@
-version: '3.8'
+version: "3.3"
 services:
   backend:
-    build: ./backend
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: dianjianbiao_backend
     ports:
       - "8000:8000"
-    volumes:
-      - ./backend/data:/app/data
     restart: always
+
   frontend:
-    build: ./frontend
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: dianjianbiao_frontend
     ports:
       - "3000:3000"
-    depends_on:
-      - backend
     restart: always

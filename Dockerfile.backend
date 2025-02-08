@@ -1,0 +1,30 @@
+# Dockerfile.backend
+FROM py310-cmake316-cuda11.3:ubuntu20
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# 使用国内的 apt 镜像源来加速
+RUN sed -i 's/archive.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list && sed -i 's/security.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list
+
+# 安装系统依赖及 Python3
+RUN apt-get update && apt-get install -y python3 python3-pip python3-dev build-essential
+
+# 设置工作目录
+WORKDIR /app/backend
+
+# 复制后端代码
+COPY backend/ /app/backend/
+COPY backend/requirements.txt /app/backend/
+
+# 使用清华源安装 Python 包，并适当延长超时时间
+RUN pip3 install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple --default-timeout=100 && \
+    pip3 install -r /app/backend/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple --default-timeout=100
+
+# 修改 PYTHONPATH 环境变量
+# ENV PYTHONPATH=/app/backend
+
+# 暴露 FastAPI 端口
+EXPOSE 8000
+
+# 启动 FastAPI 应用
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

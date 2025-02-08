@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日数据采集任务点检表</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid #000;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .section-title {
+      margin-top: 40px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>每日数据采集任务点检表</h1>
+  <h2>日期：___________　检查人：___________</h2>
+
+  <div class="section-title">1. 前期准备</div>
+  <table>
+    <tr>
+      <th>步骤</th>
+      <th>检查项目</th>
+      <th>检查内容/标准</th>
+      <th>检查结果</th>
+      <th>备注</th>
+    </tr>
+    <tr>
+      <td>1.1</td>
+      <td>场地整理</td>
+      <td>确保场地清洁，无杂物阻碍机器人或人工操作；地面整洁，无安全隐患。</td>
+      <td>合格/不合格</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>场地安全性检查</td>
+      <td>确保无明显安全隐患，如地面湿滑、电线裸露等。</td>
+      <td>合格/不合格</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>1.2</td>
+      <td>设备检查和设置</td>
+      <td>检查设备频率为 10Hz，补光灯正常工作，设备电量充足（≥80%），设备可正常开机。</td>
+      <td>合格/不合格</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>设备完整性</td>
+      <td>检查设备外观是否完好，无损坏或松动部件（如镜头、传感器等）。</td>
+      <td>合格/不合格</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>固件/软件版本号确认</td>
+      <td>核对设备固件或控制软件版本是否为最新版本，确保无兼容性问题。</td>
+      <td>合格/不合格</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>1.3</td>
+      <td>电脑连接情况</td>
+      <td>确认设备与电脑连接是否正常，数据传输通畅，无连接中断。</td>
+      <td>合格/不合格</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>1.4</td>
+      <td>垃圾物料准备</td>
+      <td>检查物料数量是否足够，若不足需当天采购或提前采购（走公司采购流程，约需 1 周）。</td>
+      <td>合格/不合格</td>
+      <td></td>
+    </tr>
+  </table>
+
+  <div class="section-title">2. 数据采集</div>
+  <table>
+    <tr>
+      <th>步骤</th>
+      <th>检查项目</th>
+      <th>检查内容/标准</th>
+      <th>检查结果</th>
+      <th>备注</th>
+    </tr>
+    <tr>
+      <td>2.1</td>
+      <td>采集：机器自动覆盖</td>
+      <td>确认机器人采集覆盖范围及轨迹是否正确，确保无遗漏采集区域。</td>
+      <td>合格/不合格</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>路径规划检查</td>
+      <td>确认机器人路径是否已根据场景调整，避免遗漏区域或重复采集。</td>
+      <td>合格/不合格</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>2.2</td>
+      <td>采集：手动推行设备</td>
+      <td>确保手动操作时设备的采集轨迹与既定路线一致，无偏移或遗漏。</td>
+      <td>合格/不合格</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>2.3</td>
+      <td>数据拉取保存</td>
+      <td>将采集数据从设备拉取到电脑，确认保存路径正确且所有数据已完整拉取。</td>
+      <td>合格/不合格</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>2.4</td>
+      <td>检查数据是否拉取成功</td>
+      <td>核查数据是否完整拉取，无丢失或损坏文件。</td>
+      <td>合格/不合格</td>
+      <td></td>
+    </tr>
+  </table>
+
+  <div class="section-title">3. 数据整理</div>
+  <table>
+    <tr>
+      <th>步骤</th>
+      <th>检查项目</th>
+      <th>检查内容/标准</th>
+      <th>检查结果</th>
+      <th>备注</th>
+    </tr>
+    <tr>
+      <td>3.1</td>
+      <td>视频转图像</td>
+      <td>使用工具将采集的视频数据转换为图像文件，确保转换过程无异常。</td>
+      <td>合格/不合格</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>3.2</td>
+      <td>重命名</td>
+      <td>按照机型、摄像头位置和日期重命名，确保命名格式一致。</td>
+      <td>合格/不合格</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>3.3</td>
+      <td>信息统计</td>
+      <td>统计图像文件数量，确保与采集任务数量要求一致。</td>
+      <td>合格/不合格</td>
+      <td></td>
+    </tr>
+  </table>
+
+  <div class="section-title">4. 数据上传和检查</div>
+  <table>
+    <tr>
+      <th>步骤</th>
+      <th>检查项目</th>
+      <th>检查内容/标准</th>
+      <th>检查结果</th>
+      <th>备注</th>
+    </tr>
+    <tr>
+      <td>4.1</td>
+      <td>数据上传到服务器</td>
+      <td>确认采集数据已正确上传至指定服务器目录，路径清晰。</td>
+      <td>合格/不合格</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>4.2</td>
+      <td>上传后检查</td>
+      <td>检查上传的文件夹是否为空，权限设置是否正确，确保团队可访问。</td>
+      <td>合格/不合格</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>4.3</td>
+      <td>日志填写</td>
+      <td>在任务日志中记录当天任务完成情况、发现的问题及改进建议。</td>
+      <td>合格/不合格</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>4.4</td>
+      <td>企微群同步当天工作信息</td>
+      <td>在企微群中同步当天工作完成情况，包括采集进度、问题及解决情况。</td>
+      <td>合格/不合格</td>
+      <td></td>
+    </tr>
+  </table>
+</body>
+</html>
